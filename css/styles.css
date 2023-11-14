@@ -1,0 +1,25 @@
+#marcoDivs {
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#divMastermind {
+    background-color: blue;
+    text-align: center;
+}
+#divBotonesInicio {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#botonPlay {
+    background-color: darkmagenta;
+    text-align: center;
+}
+#botonAbout {
+    background-color: darkmagenta;
+    text-align: center;
+}
+
