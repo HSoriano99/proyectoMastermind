@@ -1,55 +1,50 @@
-#marcoDivs {
-    height: 100vh;
-    width: 100vw;
-    background-color: brown;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
+#marcoDivsInicio {
+  height: 100vh;
+  width: 100vw;
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 #divMastermind {
-    background-color: darkorange;
-    display: flex;
-    justify-content: center;
-    
+  background-color: darkorange;
+  display: flex;
+  justify-content: center;
 }
 #mastermindLogo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3em;
-    width: 10em;
-    background-color:darkmagenta;
-    text-align: center;
-    color: aliceblue;
-    font-size: 5em;
-    
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 10em;
+  background-color: darkmagenta;
+  text-align: center;
+  color: aliceblue;
+  font-size: 5em;
 }
 #divBotonesInicio {
-    background-color: burlywood;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
+  background-color: burlywood;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 #botonPlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3em;
-    width: 6em;
-    background-color: darkmagenta;
-    text-align: center;
-    font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 6em;
+  background-color: darkmagenta;
+  text-align: center;
+  font-size: 3em;
 }
 #botonAbout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3em;
-    width: 6em;
-    background-color: darkmagenta;
-    text-align: center;
-    font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 6em;
+  background-color: darkmagenta;
+  text-align: center;
+  font-size: 3em;
 }
-
