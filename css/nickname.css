@@ -1,0 +1,48 @@
+#marcoDivsNickname {
+  height: 100vh;
+  width: 100vw;
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#divInputName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: burlywood;
+  height: 20em;
+  width: 40em;
+}
+#inputTitle {
+  background-color: darkturquoise;
+  font-size: 4em;
+  text-align: center;
+}
+#inputName {
+  font-size: 3em;
+  text-align: center;
+}
+#nivelesDificultad {
+  background-color: burlywood;
+  height: 15em;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#divBeginner {
+    background-color: darkturquoise;
+    font-size: 3em;
+}
+#divIntermediate {
+    background-color: darkturquoise;
+    font-size: 3em;
+}
+#divAdvanced {
+    background-color: darkturquoise;
+    font-size: 3em;
+}
+

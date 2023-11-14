@@ -7,7 +7,7 @@
   justify-content: space-around;
 }
 #divMastermind {
-  background-color: darkorange;
+  background-color:burlywood;
   display: flex;
   justify-content: center;
 }
@@ -17,9 +17,8 @@
   justify-content: center;
   height: 3em;
   width: 10em;
-  background-color: darkmagenta;
+  background-color:darkturquoise;
   text-align: center;
-  color: aliceblue;
   font-size: 5em;
 }
 #divBotonesInicio {
@@ -34,7 +33,7 @@
   justify-content: center;
   height: 3em;
   width: 6em;
-  background-color: darkmagenta;
+  background-color:darkturquoise;
   text-align: center;
   font-size: 3em;
 }
@@ -44,7 +43,7 @@
   justify-content: center;
   height: 3em;
   width: 6em;
-  background-color: darkmagenta;
+  background-color:darkturquoise;
   text-align: center;
   font-size: 3em;
 }
