@@ -1,0 +1,98 @@
+#marcoDivsChooseColor {
+    height: 100vh;
+    width: 100vw;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#tituloChooseColor {
+    background-color: darkturquoise;
+    font-size: 4em;
+    text-align: justify;
+}
+#divColores {
+    background-color:snow;
+    height: 10em;
+    width: 40em;
+    display: flex;
+}
+#color1 {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 10em;
+}
+#color2 {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 10em;
+}
+#color3 {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 10em;
+}
+#color4 {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 10em;
+}
+/* #color5 {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 10em;
+} */ 
+/* probando la incorporación de colores con flex para diferentes niveles de dificultad */
+#divMuestras {
+    height: 7em;
+    width: 30em;
+    display: flex;
+}
+#muestra1 {
+    background-color: gold;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 7.5em;
+}
+#muestra2 {
+    background-color:blue;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 7.5em;
+}
+#muestra3 {
+    background-color: green;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 7.5em;
+}
+#muestra4 {
+    background-color: red;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 7.5em;
+}
+#botonValidarColor {
+    font-size: 3em;
+    background-color: darkturquoise;
+    
+}
