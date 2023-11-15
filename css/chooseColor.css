@@ -115,7 +115,7 @@
     height:auto;
     width: 7.5em;
 }
-#muestra7 {
+/* #muestra7 {
     background-color:cyan;
     border-width:0.3em;
     border-color: black;
@@ -130,7 +130,7 @@
     border-style: solid;
     height:auto;
     width: 7.5em;
-}
+} */
 #botonValidarColor {
     font-size: 3em;
     background-color: darkturquoise;
