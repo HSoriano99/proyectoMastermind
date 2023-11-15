@@ -1,0 +1,111 @@
+#marcoDivsPartida {
+    height: 100vh;
+    width: 100vw;
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#settingsPartida {
+    background-color: burlywood;
+    height: auto;
+    width: 50vw;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tableroMastermind {
+    background-color:coral;
+    height: auto;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tituloPartida {
+    background-color: darkturquoise;
+    font-size: 4em;
+    text-align: justify;
+    width:fit-content;
+}
+#tituloDificultadPartida {
+    background-color: darkturquoise;
+    font-size: 3em;
+    text-align: justify;
+    width: fit-content;
+}
+#coloresParaJugar{
+    display: flex;
+    width: 75%;
+    height: 10em;
+}
+#coloresParaJugar div {
+    background-color: snow;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 10em;
+}
+#botonesPartida {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#botonCheckColors {
+    font-size: 3em;
+    background-color: darkturquoise;
+    text-align: center;
+}
+#botonRemove {
+    font-size: 3em;
+    background-color: darkturquoise;
+    text-align: center;
+}
+#divComprobar {
+    background-color: burlywood;
+    height: 75%;
+    width:75%;
+    display: flex;
+    flex-direction: row;
+}
+#coloresComprobar {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+}
+#resultadoComprobar {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:auto;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+}
+#coloresComprobar div {
+    background-color: snow;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:5em;
+    width: 10em;
+}
+#resultadoComprobar div {
+    background-color: snow;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height: 5em;
+    width: 100%;
+}
