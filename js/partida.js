@@ -8,7 +8,7 @@ let cambiarNivelElegido = sessionStorage.getItem("nivelElegido");
 let nivelElegido = document.getElementById("tituloDificultadPartida");
 nivelElegido.innerHTML = `LEVEL: ${cambiarNivelElegido}`;
 
-//traigo el array de colores elegidos para poder pintarlos, en este caso, uno por uno.
+//traigo el array de colores elegidos para jugar para poder seleccionarlos, en este caso, uno por uno.
 let arrayColoresElegidos = JSON.parse(
   sessionStorage.getItem("arrayColoresElegidos")
 );
@@ -31,6 +31,8 @@ let arrayColoresGanador = arrayColoresElegidos.sort(function () {
 console.log("ColoresGanador " + arrayColoresGanador);
 
 //pintamos nuestra combinación en partida
+
+//seleccionamos primero los colores para la partida con los colores elegidos
 
 colorParaJugar1.addEventListener("click", () => {
   sessionStorage.removeItem("ColorElegido");
@@ -68,6 +70,8 @@ colorParaJugar4.addEventListener("click", () => {
   sessionStorage.setItem("ColorElegido", colorCssColorParaJugar4);
 });
 
+//pintamos nuestra combinación y creamos nuestro array con los colores del jugador.
+
 let arrayColoresJugador = [];
 
 color1Comprobar.addEventListener("click", () => {
@@ -77,6 +81,7 @@ color1Comprobar.addEventListener("click", () => {
 
   let colorComprobar1 = color1Comprobar.style.backgroundColor;
   arrayColoresJugador.splice(0, 1, colorComprobar1);
+  console.log(arrayColoresJugador);
 });
 
 color2Comprobar.addEventListener("click", () => {
@@ -86,6 +91,7 @@ color2Comprobar.addEventListener("click", () => {
 
   let colorComprobar2 = color2Comprobar.style.backgroundColor;
   arrayColoresJugador.splice(1, 1, colorComprobar2);
+  console.log(arrayColoresJugador);
 });
 
 color3Comprobar.addEventListener("click", () => {
@@ -95,6 +101,7 @@ color3Comprobar.addEventListener("click", () => {
 
   let colorComprobar3 = color3Comprobar.style.backgroundColor;
   arrayColoresJugador.splice(2, 1, colorComprobar3);
+  console.log(arrayColoresJugador);
 });
 
 color4Comprobar.addEventListener("click", () => {
@@ -102,17 +109,28 @@ color4Comprobar.addEventListener("click", () => {
   color4Comprobar.style.backgroundColor =
     sessionStorage.getItem("ColorElegido");
 
-  let colorComprobar4 = color1Comprobar.style.backgroundColor;
+  let colorComprobar4 = color4Comprobar.style.backgroundColor;
   arrayColoresJugador.splice(3, 1, colorComprobar4);
+  console.log(arrayColoresJugador);
 });
 
-//validamos nuestra combinación
+//validamos nuestra combinación, si gano pasamos pantalla winner, si pierdo se crea otro intento y se generan los resultados en el intento hecho.
+console.log("arrayColoresJugador " + arrayColoresJugador);
 botonCheckColors.addEventListener("click", () => {
   for (let i = 0; i < arrayColoresJugador.length; i++) {
     if (arrayColoresJugador[i] !== arrayColoresGanador[i]) {
+      // let divResultados = document.getElementById("resultadoComprobar");
+      // let divsResultados = divResultados.getElementsByTagName("div");
+      // console.log(divsResultados);
+      // for (let i = 0; i < divsResultados.length; i++) {
+      //   divsResultados[i].style.backgroundColor = "purple";
+      // }
+      // console.log(divsResultados);
+
+
       return alert("Has perdido");
     } else {
-      return alert("Has ganado");
+      location.href = "./winner.html";
     }
   }
 });
