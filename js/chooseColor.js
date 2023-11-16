@@ -1,4 +1,7 @@
-muestra1.addEventListener("click", () => {
+//elegimos los colores de las muestras y asignamos cada color manualmente, en pagina de partida se intenta implementar como función para no alargar el codigo.
+
+muestra1.addEventListener("click", (e) => {
+  console.log(e)
   sessionStorage.removeItem("ColorElegido");
   let muestra1 = document.getElementById("muestra1");
   let cssMuestra1 = getComputedStyle(muestra1);
@@ -90,6 +93,7 @@ botonValidarColor.addEventListener("click", () => {
       "arrayColoresElegidos",
       JSON.stringify(arrayColoresElegidos)
     );
+    sessionStorage.removeItem("ColorElegido");
     location.href = "./partida.html";
   } else {
     alert("Debe seleccionar 4 colores");
