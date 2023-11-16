@@ -52,9 +52,8 @@ color1.addEventListener("click", () => {
   color1.style.backgroundColor = sessionStorage.getItem("ColorElegido");
 
   let colorElegido1 = color1.style.backgroundColor;
-  arrayColoresElegidos.splice(0,1,colorElegido1);
+  arrayColoresElegidos.splice(0, 1, colorElegido1);
   console.log(arrayColoresElegidos);
-
 });
 
 color2.addEventListener("click", () => {
@@ -62,9 +61,8 @@ color2.addEventListener("click", () => {
   color2.style.backgroundColor = sessionStorage.getItem("ColorElegido");
 
   let colorElegido2 = color2.style.backgroundColor;
-  arrayColoresElegidos.splice(1,1,colorElegido2);
+  arrayColoresElegidos.splice(1, 1, colorElegido2);
   console.log(arrayColoresElegidos);
-
 });
 
 color3.addEventListener("click", () => {
@@ -72,9 +70,8 @@ color3.addEventListener("click", () => {
   color3.style.backgroundColor = sessionStorage.getItem("ColorElegido");
 
   let colorElegido3 = color3.style.backgroundColor;
-  arrayColoresElegidos.splice(2,1,colorElegido3);
+  arrayColoresElegidos.splice(2, 1, colorElegido3);
   console.log(arrayColoresElegidos);
-
 });
 
 color4.addEventListener("click", () => {
@@ -82,18 +79,19 @@ color4.addEventListener("click", () => {
   color4.style.backgroundColor = sessionStorage.getItem("ColorElegido");
 
   let colorElegido4 = color4.style.backgroundColor;
-  arrayColoresElegidos.splice(3,1,colorElegido4);
+  arrayColoresElegidos.splice(3, 1, colorElegido4);
   console.log(arrayColoresElegidos);
-
 });
 
 botonValidarColor.addEventListener("click", () => {
-    let botonValidarColor = document.getElementById("botonValidarColor");
-    if (arrayColoresElegidos.length == 4) {
-
-      location.href ="./partida.html";
-
-    } else {
-      alert("Debe seleccionar 4 colores");
-    }
+  let botonValidarColor = document.getElementById("botonValidarColor");
+  if (arrayColoresElegidos.length == 4) {
+    sessionStorage.setItem(
+      "arrayColoresElegidos",
+      JSON.stringify(arrayColoresElegidos)
+    );
+    location.href = "./partida.html";
+  } else {
+    alert("Debe seleccionar 4 colores");
+  }
 });
