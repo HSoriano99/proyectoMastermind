@@ -48,7 +48,7 @@ muestra6.addEventListener("click", () => {
   sessionStorage.setItem("ColorElegido", colorMuestra6);
 });
 
-let arrayColoresElegidos = [];
+let arrayColoresElegidos = ["","","",""];
 
 color1.addEventListener("click", () => {
   let color1 = document.getElementById("color1");

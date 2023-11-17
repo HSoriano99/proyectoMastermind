@@ -72,10 +72,11 @@ colorParaJugar4.addEventListener("click", () => {
 
 //pintamos nuestra combinación y creamos nuestro array con los colores del jugador.
 
-let arrayColoresJugador = [];
+let arrayColoresJugador = ["","","",""];
+let color1Comprobar = document.getElementById("color1Comprobar");
 
 color1Comprobar.addEventListener("click", () => {
-  let color1Comprobar = document.getElementById("color1Comprobar");
+  // color1Comprobar = document.getElementById("color1Comprobar");
   color1Comprobar.style.backgroundColor =
     sessionStorage.getItem("ColorElegido");
 
@@ -84,8 +85,10 @@ color1Comprobar.addEventListener("click", () => {
   console.log(arrayColoresJugador);
 });
 
+let color2Comprobar = document.getElementById("color2Comprobar");
+
 color2Comprobar.addEventListener("click", () => {
-  let color2Comprobar = document.getElementById("color2Comprobar");
+  // let color2Comprobar = document.getElementById("color2Comprobar");
   color2Comprobar.style.backgroundColor =
     sessionStorage.getItem("ColorElegido");
 
@@ -94,8 +97,10 @@ color2Comprobar.addEventListener("click", () => {
   console.log(arrayColoresJugador);
 });
 
+let color3Comprobar = document.getElementById("color3Comprobar");
+
 color3Comprobar.addEventListener("click", () => {
-  let color3Comprobar = document.getElementById("color3Comprobar");
+  // let color3Comprobar = document.getElementById("color3Comprobar");
   color3Comprobar.style.backgroundColor =
     sessionStorage.getItem("ColorElegido");
 
@@ -104,8 +109,10 @@ color3Comprobar.addEventListener("click", () => {
   console.log(arrayColoresJugador);
 });
 
+let color4Comprobar = document.getElementById("color4Comprobar");
+
 color4Comprobar.addEventListener("click", () => {
-  let color4Comprobar = document.getElementById("color4Comprobar");
+  // let color4Comprobar = document.getElementById("color4Comprobar");
   color4Comprobar.style.backgroundColor =
     sessionStorage.getItem("ColorElegido");
 
@@ -114,23 +121,52 @@ color4Comprobar.addEventListener("click", () => {
   console.log(arrayColoresJugador);
 });
 
-//validamos nuestra combinación, si gano pasamos pantalla winner, si pierdo se crea otro intento y se generan los resultados en el intento hecho.
+//validamos nuestra combinación, si gano pasamos pantalla winner, si pierdo se crea otro intento y se generan los aciertos en el intento hecho.
 console.log("arrayColoresJugador " + arrayColoresJugador);
-botonCheckColors.addEventListener("click", () => {
-  for (let i = 0; i < arrayColoresJugador.length; i++) {
-    if (arrayColoresJugador[i] !== arrayColoresGanador[i]) {
-      // let divResultados = document.getElementById("resultadoComprobar");
-      // let divsResultados = divResultados.getElementsByTagName("div");
-      // console.log(divsResultados);
-      // for (let i = 0; i < divsResultados.length; i++) {
-      //   divsResultados[i].style.backgroundColor = "purple";
-      // }
-      // console.log(divsResultados);
+//traemos nuestros divs para validar los ciertos.
+let acierto1 = document.getElementById("resultado1Comprobar");
+let acierto2 = document.getElementById("resultado2Comprobar");
+let acierto3 = document.getElementById("resultado3Comprobar");
+let acierto4 = document.getElementById("resultado4Comprobar");
+let arrayAciertos = [acierto1, acierto2, acierto3, acierto4];
+//creamos un array y asignamos 0 o 1 a ese array para luego poder asignar color cuando sea 1 el valor del elemento del array.
+let aciertos = [];
 
-
-      return alert("Has perdido");
+const verificarAciertos = (aciertos) => {
+  for (let j = 0; j < arrayColoresJugador.length; j++) {
+    if (arrayColoresJugador[j] == arrayColoresGanador[j]) {
+      // aciertos[j] = "1";
+      aciertos.splice(j, 1, "1");
     } else {
-      location.href = "./winner.html";
+      // aciertos[j] = "0";
+      aciertos.splice(j, 1, "0");
     }
+  }
+  return aciertos;
+};
+
+//creamos una funcion para asignar el color del acierto o error a cada elemento del array.(verde acierto y rojo error)
+const pintarAciertos = (aciertos) => {
+  for (let i = 0; i < arrayColoresJugador.length; i++) {
+    if (aciertos[i] == "1") {
+      arrayAciertos[i].style.backgroundColor = "green";
+    } else {
+      arrayAciertos[i].style.backgroundColor = "red";
+    }
+  }
+};
+//validamos con el boton, pintando el color del acierto y mostrando o redirigiendo si hemos ganado.
+botonCheckColors.addEventListener("click", () => {
+  verificarAciertos(aciertos);
+  pintarAciertos(aciertos);
+  console.log("array de aciertos " + aciertos);
+  console.log("arrayColoresJugador " + arrayColoresJugador);
+  // for (let i = 0; i < arrayColoresJugador.length; i++) {
+  if (
+    JSON.stringify(arrayColoresJugador) === JSON.stringify(arrayColoresGanador)
+  ) {
+    location.href = "./winner.html";
+  } else {
+    return alert("Has perdido");
   }
 });
