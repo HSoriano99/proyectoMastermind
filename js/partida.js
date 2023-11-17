@@ -155,6 +155,15 @@ const pintarAciertos = (aciertos) => {
     }
   }
 };
+
+//INTENTO!!
+//funcion de crear nuevo intento
+// const crearNuevoIntento = () => {
+//   let padreComprobar = document.getElementById("divComprobar");
+//   padreComprobar.innerHTML = 
+//   "<div class='fila'><div></div><div></div><div></div><div></div></div>";
+// };
+
 //validamos con el boton, pintando el color del acierto y mostrando o redirigiendo si hemos ganado.
 botonCheckColors.addEventListener("click", () => {
   verificarAciertos(aciertos);
@@ -167,6 +176,9 @@ botonCheckColors.addEventListener("click", () => {
   ) {
     location.href = "./winner.html";
   } else {
-    return alert("Has perdido");
+    //llamamos a la funcion para crear nuevo intento.
+    // crearNuevoIntento();
+    alert("HAS PERDIDO! Prueba otra vez.");
+    
   }
 });
