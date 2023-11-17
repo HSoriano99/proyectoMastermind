@@ -72,7 +72,7 @@ colorParaJugar4.addEventListener("click", () => {
 
 //pintamos nuestra combinación y creamos nuestro array con los colores del jugador.
 
-let arrayColoresJugador = ["","","",""];
+let arrayColoresJugador = ["", "", "", ""];
 let color1Comprobar = document.getElementById("color1Comprobar");
 
 color1Comprobar.addEventListener("click", () => {
@@ -160,7 +160,7 @@ const pintarAciertos = (aciertos) => {
 //funcion de crear nuevo intento
 // const crearNuevoIntento = () => {
 //   let padreComprobar = document.getElementById("divComprobar");
-//   padreComprobar.innerHTML = 
+//   padreComprobar.innerHTML =
 //   "<div class='fila'><div></div><div></div><div></div><div></div></div>";
 // };
 
@@ -171,7 +171,7 @@ botonCheckColors.addEventListener("click", () => {
   console.log("array de aciertos " + aciertos);
   console.log("arrayColoresJugador " + arrayColoresJugador);
 
- //Utilizamos JSON.stringify para poder comparar el contenido de los arrays correctamente.
+  //Utilizamos JSON.stringify para poder comparar el contenido de los arrays correctamente.
   if (
     JSON.stringify(arrayColoresJugador) === JSON.stringify(arrayColoresGanador)
   ) {
@@ -179,7 +179,6 @@ botonCheckColors.addEventListener("click", () => {
   } else {
     //llamamos a la funcion para crear nuevo intento.
     // crearNuevoIntento();
-    alert("HAS PERDIDO! Prueba otra vez.");
-    
+    alert("HAS FALLADO! Comprueba tus aciertos e intenta otra vez.");
   }
 });
