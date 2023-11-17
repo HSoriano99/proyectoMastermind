@@ -170,7 +170,7 @@ botonCheckColors.addEventListener("click", () => {
   pintarAciertos(aciertos);
   console.log("array de aciertos " + aciertos);
   console.log("arrayColoresJugador " + arrayColoresJugador);
-  // for (let i = 0; i < arrayColoresJugador.length; i++) {
+ 
   if (
     JSON.stringify(arrayColoresJugador) === JSON.stringify(arrayColoresGanador)
   ) {
