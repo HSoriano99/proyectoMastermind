@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 #tituloPartida {
     background-color: darkturquoise;
@@ -68,19 +69,10 @@
     background-color: darkturquoise;
     text-align: center;
 }
-#divComprobar {
+.divComprobar {
     background-color: burlywood;
-    height: 75%;
+    height: fit-content;
     width:75%;
-    display: flex;
-    flex-direction: row;
-}
-#coloresComprobar {
-    border-width:0.3em;
-    border-color: black;
-    border-style: solid;
-    height:fit-content;
-    width: 75%;
     display: flex;
     flex-direction: row;
 }
@@ -93,7 +85,24 @@
     display: flex;
     flex-direction: row;
 }
-
+#coloresComprobar {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:fit-content;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+}
+/* #coloresComprobar2 {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:fit-content;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+} */
 #resultadoComprobar {
     border-width:0.3em;
     border-color: black;
@@ -103,6 +112,15 @@
     display: flex;
     flex-direction: row;
 }
+/* #resultadoComprobar2 {
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:fit-content;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+} */
 #coloresComprobar div {
     background-color: snow;
     border-width:0.3em;
@@ -119,3 +137,19 @@
     height: 5em;
     width: 100%;
 }
+/* #coloresComprobar2 div {
+    background-color: snow;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height:5em;
+    width: 10em;
+}
+#resultadoComprobar2 div {
+    background-color: snow;
+    border-width:0.3em;
+    border-color: black;
+    border-style: solid;
+    height: 5em;
+    width: 100%;
+} */

@@ -169,7 +169,7 @@ botonCheckColors.addEventListener("click", () => {
   console.log("arrayColoresJugador " + arrayColoresJugador);
   //INCREMENTAMOS NUESTRO CONTADOR DE INTENTOS CADA VEZ QUE VALIDAMOS LOS COLORES.
   contadorIntentos++;
-  console.log(contadorIntentos);
+  console.log("Intento nº " + contadorIntentos);
 
   //Utilizamos JSON.stringify para poder comparar el contenido de los arrays correctamente.
   if (
