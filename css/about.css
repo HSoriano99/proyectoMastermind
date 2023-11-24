@@ -20,9 +20,14 @@
 }
 #divHowTo {
     display: flex;
-    height: 15em;
+    height: fit-content;
     width: 25em;
     background-color: darkturquoise;
     text-align: justify;
     font-size: 2em;
 }
+#botonHomeAbout {
+  background-color: darkturquoise;
+  font-size: 4em;
+}
+  

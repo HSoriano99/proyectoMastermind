@@ -178,6 +178,6 @@ botonCheckColors.addEventListener("click", () => {
     location.href = "./winner.html";
   } else if (contadorIntentos == 10) {
     //UTILIZAMOS NUESTRO CONTADOR PARA DETERMINAR CUANDO PIERDES LA PARTIDA.
-    alert("HAS FALLADO! HAS AGOTADO TODOS TUS INTENTOS.");
+    location.href = "./loser.html";
   }
 });
