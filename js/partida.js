@@ -156,29 +156,28 @@ const pintarAciertos = (aciertos) => {
   }
 };
 
-//INTENTO!!
-//funcion de crear nuevo intento
-// const crearNuevoIntento = () => {
-//   let padreComprobar = document.getElementById("divComprobar");
-//   padreComprobar.innerHTML =
-//   "<div class='fila'><div></div><div></div><div></div><div></div></div>";
-// };
 
 //validamos con el boton, pintando el color del acierto y mostrando o redirigiendo si hemos ganado.
+
+//CREAMOS UNA VARIABLE PARA ALMACENAR NUESTROS INTENTOS.
+let contadorIntentos = 0;
+
 botonCheckColors.addEventListener("click", () => {
   verificarAciertos(aciertos);
   pintarAciertos(aciertos);
   console.log("array de aciertos " + aciertos);
   console.log("arrayColoresJugador " + arrayColoresJugador);
+  //INCREMENTAMOS NUESTRO CONTADOR DE INTENTOS CADA VEZ QUE VALIDAMOS LOS COLORES.
+  contadorIntentos++;
+  console.log(contadorIntentos);
 
   //Utilizamos JSON.stringify para poder comparar el contenido de los arrays correctamente.
   if (
     JSON.stringify(arrayColoresJugador) === JSON.stringify(arrayColoresGanador)
   ) {
     location.href = "./winner.html";
-  } else {
-    //llamamos a la funcion para crear nuevo intento.
-    // crearNuevoIntento();
-    alert("HAS FALLADO! Comprueba tus aciertos e intenta otra vez.");
+  } else if (contadorIntentos == 10) {
+    //UTILIZAMOS NUESTRO CONTADOR PARA DETERMINAR CUANDO PIERDES LA PARTIDA.
+    alert("HAS FALLADO! HAS AGOTADO TODOS TUS INTENTOS.");
   }
 });
